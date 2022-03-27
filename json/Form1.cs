@@ -33,9 +33,34 @@ namespace json
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Program.GetFile();
+            foreach (Hotel hotel in hotel_array.hotels.Hotel_Array)
+            {
+                if (hotel.name.Equals(dataGridView1.CurrentCell.Value))
+                {
+                    foreach (Room room in hotel.rooms.RoomArray)
+                    {
+                        if (dataGridView2.Rows.Count > 3)
+                        {
+                            dataGridView2.Rows.Clear();
+                            dataGridView3.Rows.Clear();
+                        }
+                        dataGridView2.Rows.Add(room.number, room.bed, room.beautiful_view, room.fridge, room.price);
+                    }
+                }
+            }
+
+            foreach (Hotel hotel in hotel_array.hotels.Hotel_Array)
+            {
+                if (hotel.name.Equals(dataGridView1.CurrentCell.Value))
+                {
+                    foreach (Bun bun in hotel.buns.BunArray)
+                    {
+                        dataGridView3.Rows.Add(bun.name, bun.add_price);
+                    }
+                }
+            }
         }
     }
 }

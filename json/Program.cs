@@ -24,16 +24,16 @@ namespace json
         public static Hotels LoadJson()
         {
             string path = "новый 1.txt";
-            return JsonConvert.DeserializeObject<Hotels>(File.ReadAllText(path));
-            //try
-            //{
-            //    return JsonConvert.DeserializeObject<Hotels>(File.ReadAllText(path));
-            //}
-            //catch (Exception e)
-            //{
-            //    MessageBox.Show("Ошибка десериализации", "Error");
-            //    return null;
-            //}
+            //return JsonConvert.DeserializeObject<Hotels>(File.ReadAllText(path));
+            try
+            {
+                return JsonConvert.DeserializeObject<Hotels>(File.ReadAllText(path));
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ошибка десериализации", "Error");
+                return null;
+            }
         }
 
         //public static void GetFile()

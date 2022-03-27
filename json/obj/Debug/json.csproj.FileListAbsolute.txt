@@ -1,0 +1,13 @@
+C:\Users\user\source\repos\lesson4 25.03\json\bin\Debug\json.exe.config
+C:\Users\user\source\repos\lesson4 25.03\json\bin\Debug\json.exe
+C:\Users\user\source\repos\lesson4 25.03\json\bin\Debug\json.pdb
+C:\Users\user\source\repos\lesson4 25.03\json\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\source\repos\lesson4 25.03\json\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\source\repos\lesson4 25.03\json\obj\Debug\json.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\lesson4 25.03\json\obj\Debug\json.Properties.Resources.resources
+C:\Users\user\source\repos\lesson4 25.03\json\obj\Debug\json.csproj.GenerateResource.cache
+C:\Users\user\source\repos\lesson4 25.03\json\obj\Debug\json.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\lesson4 25.03\json\obj\Debug\json.csproj.CopyComplete
+C:\Users\user\source\repos\lesson4 25.03\json\obj\Debug\json.exe
+C:\Users\user\source\repos\lesson4 25.03\json\obj\Debug\json.pdb
+C:\Users\user\source\repos\lesson4 25.03\json\obj\Debug\json.Form1.resources

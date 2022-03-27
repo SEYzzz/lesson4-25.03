@@ -35,16 +35,30 @@ namespace json
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.clmnHotelName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.clmnRoomNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmnBed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmnView = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmnFridge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.clmnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmnAddPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -55,7 +69,6 @@ namespace json
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.MintCream;
-            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.btnDeserialize);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -97,6 +110,7 @@ namespace json
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(452, 425);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // clmnHotelName
             // 
@@ -107,6 +121,7 @@ namespace json
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -115,15 +130,100 @@ namespace json
             this.tabPage2.Text = "Номера";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // dataGridView2
             // 
-            this.button1.Location = new System.Drawing.Point(699, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmnRoomNum,
+            this.clmnBed,
+            this.clmnView,
+            this.clmnFridge,
+            this.clmnPrice});
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(786, 415);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // clmnRoomNum
+            // 
+            this.clmnRoomNum.HeaderText = "Номер номера";
+            this.clmnRoomNum.MinimumWidth = 6;
+            this.clmnRoomNum.Name = "clmnRoomNum";
+            this.clmnRoomNum.ReadOnly = true;
+            // 
+            // clmnBed
+            // 
+            this.clmnBed.HeaderText = "Кол-во спальных мест";
+            this.clmnBed.MinimumWidth = 6;
+            this.clmnBed.Name = "clmnBed";
+            this.clmnBed.ReadOnly = true;
+            // 
+            // clmnView
+            // 
+            this.clmnView.HeaderText = "Красивый вид";
+            this.clmnView.MinimumWidth = 6;
+            this.clmnView.Name = "clmnView";
+            this.clmnView.ReadOnly = true;
+            // 
+            // clmnFridge
+            // 
+            this.clmnFridge.HeaderText = "Холодильник";
+            this.clmnFridge.MinimumWidth = 6;
+            this.clmnFridge.Name = "clmnFridge";
+            this.clmnFridge.ReadOnly = true;
+            // 
+            // clmnPrice
+            // 
+            this.clmnPrice.HeaderText = "Цена";
+            this.clmnPrice.MinimumWidth = 6;
+            this.clmnPrice.Name = "clmnPrice";
+            this.clmnPrice.ReadOnly = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(792, 421);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmnName,
+            this.clmnAddPrice});
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView3.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(786, 415);
+            this.dataGridView3.TabIndex = 0;
+            // 
+            // clmnName
+            // 
+            this.clmnName.HeaderText = "Название";
+            this.clmnName.MinimumWidth = 6;
+            this.clmnName.Name = "clmnName";
+            this.clmnName.ReadOnly = true;
+            // 
+            // clmnAddPrice
+            // 
+            this.clmnAddPrice.HeaderText = "Является ли цена включеной";
+            this.clmnAddPrice.MinimumWidth = 6;
+            this.clmnAddPrice.Name = "clmnAddPrice";
+            this.clmnAddPrice.ReadOnly = true;
             // 
             // Form1
             // 
@@ -137,6 +237,10 @@ namespace json
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,7 +253,16 @@ namespace json
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnDeserialize;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmnHotelName;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmnRoomNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmnBed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmnView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmnFridge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmnPrice;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmnAddPrice;
     }
 }
 
